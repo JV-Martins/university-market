@@ -1,0 +1,39 @@
+<mat-toolbar class="header mat-elevation-z5">
+  <mat-toolbar-row class="header-row-one">
+    <!-- <button mat-icon-button class="menu">
+      <mat-icon>
+        menu
+      </mat-icon>
+    </button> -->
+    <span (click)="debug()">University Market</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="header-row-two">
+    <!-- Categoria -->
+    <div class="options">
+      <span mat-button [matMenuTriggerFor]="menuCategoria">Categoria</span>
+      <mat-menu #menuCategoria="matMenu">
+        <button mat-menu-item>Livros</button>
+        <button mat-menu-item>Eletrônicos</button>
+        <button mat-menu-item>Equipamentos</button>
+      </mat-menu>
+    </div>
+    <!-- Curso -->
+    <div class="options">
+      <span mat-button [matMenuTriggerFor]="menuCurso">Curso</span>
+      <mat-menu #menuCurso="matMenu">
+        <button mat-menu-item>Análise e Desenvolvimento de Sistemas</button>
+        <button mat-menu-item>Medicina</button>
+        <button mat-menu-item>Odontologia</button>
+        <button mat-menu-item>Direito</button>
+      </mat-menu>
+    </div>
+    <div class="options">
+      <!-- Status -->
+      <span [matMenuTriggerFor]="menuStatus">Status</span>
+      <mat-menu #menuStatus="matMenu">
+        <button mat-menu-item>Usado</button>
+        <button mat-menu-item>Novo</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
