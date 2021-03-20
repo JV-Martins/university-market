@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from './menu-item.model';
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   menuList: MenuItem[] = [];
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.menuList.push(new MenuItem("Categoria", "fa fa-cubes", null, [], false));
@@ -21,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.menuList.push(new MenuItem("Teste", "fa fa-cubes", null, [], true));
   }
 
-  debug() {
-    alert('funcionou')
+  replaceToHome() {
+    this.route.navigate(['/']);
   }
 }
