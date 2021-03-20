@@ -65,7 +65,7 @@ body {
 .search {
     display: flex;
     /* width: 700px; */
-    max-width: 100%;
+    max-width: calc(100px);
 }
 
 .search > input {
