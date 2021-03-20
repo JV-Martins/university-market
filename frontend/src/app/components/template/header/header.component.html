@@ -5,20 +5,19 @@
         <img src="../../../../assets/img/logo-branca2.png" class="img-logo">
       </span>
     </div>
-    <div>
-      <form class="search ">
-        <mat-form-field class="example-full-width">
-          <mat-label>Pesquise aqui
-          </mat-label>
-          <input matInput >
-        </mat-form-field>
+    <div id="input-search">
+      <form class="search">
+        <input type="text">
       </form>
     </div>
   </div>
   <div class="row-two">
     <div class="nav-options">
       <div class="options"[matMenuTriggerFor]="menuCategoria">
-        <span>Categoria</span>
+        <span>
+          <i class="fa fa-cubes"></i>
+          Categoria
+        </span>
         <mat-menu #menuCategoria="matMenu">
           <button mat-menu-item>Livros</button>
           <button mat-menu-item>Eletrônicos</button>
@@ -26,7 +25,10 @@
         </mat-menu>
       </div>
       <div class="options"[matMenuTriggerFor]="menuCurso">
-        <span>Curso</span>
+        <span>
+          <i class="fa fa-graduation-cap"></i>
+          Curso
+        </span>
         <mat-menu #menuCurso="matMenu">
           <button mat-menu-item>Análise e Desenvolvimento de Sistemas</button>
           <button mat-menu-item>Medicina</button>
@@ -35,7 +37,10 @@
         </mat-menu>
       </div>
       <div class="options" [matMenuTriggerFor]="menuStatus">
-        <span>Status</span>
+        <span>
+          <i class="fa fa-ticket"></i>
+          Status
+        </span>
         <mat-menu #menuStatus="matMenu">
           <button mat-menu-item>Usado</button>
           <button mat-menu-item>Novo</button>

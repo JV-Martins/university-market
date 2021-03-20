@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Roboto:wght@400;500;700&display=swap');
 
+body {
+    font-size: 16px;
+}
+
 .header{
     font-family: 'Roboto', sans-serif;
     background-color: dodgerblue;
-    height: 100px;
     color: #fffbff;
     font-weight: 600;
-    
 }
 
 .row-one{
@@ -44,18 +46,21 @@
 
 .options{
     display: flex;
+    width: 120px;
+    font-size: 1.2em;
+    padding: 7.5px 12.5px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    font-size: 0.8rem;
-    margin-right: 16px;
-    width: 100px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: transparent;
+    transition: ease-in-out 0.15s;
 }
 
 .options:hover{
+    cursor: pointer;
     color: #dddddd;
-    border-bottom: 3px solid #dddddd;
-    font-size: 1rem;
+    border-color: #dddddd;
 } 
 
 .search{
