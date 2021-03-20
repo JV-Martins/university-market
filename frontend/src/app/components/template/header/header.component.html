@@ -49,6 +49,39 @@
           <button mat-menu-item>Novo</button>
         </mat-menu>
       </div>
+      <div class="options" [matMenuTriggerFor]="menuStatus">
+        <span>
+          <i class="fa fa-ticket"></i>
+          HomePage
+          <i class="fa fa-angle-down"></i>
+        </span>
+        <mat-menu #menuStatus="matMenu">
+          <button mat-menu-item>Usado</button>
+          <button mat-menu-item>Novo</button>
+        </mat-menu>
+      </div>
+      <div class="options" [matMenuTriggerFor]="menuStatus">
+        <span>
+          <i class="fa fa-ticket"></i>
+          Novo
+          <i class="fa fa-angle-down"></i>
+        </span>
+        <mat-menu #menuStatus="matMenu">
+          <button mat-menu-item>Usado</button>
+          <button mat-menu-item>Novo</button>
+        </mat-menu>
+      </div>
+      <div class="options" [matMenuTriggerFor]="menuStatus">
+        <span>
+          <i class="fa fa-ticket"></i>
+          Notificações
+          <i class="fa fa-angle-down"></i>
+        </span>
+        <mat-menu #menuStatus="matMenu">
+          <button mat-menu-item>Usado</button>
+          <button mat-menu-item>Novo</button>
+        </mat-menu>
+      </div>
     </div>
   </div>
 </div>
