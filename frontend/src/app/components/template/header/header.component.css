@@ -6,7 +6,7 @@ body {
 
 .header{
     font-family: 'Roboto', sans-serif;
-    background-color: dodgerblue;
+    background-color: #1e90ff;
     color: #fffbff;
     font-weight: 600;
 }
@@ -17,15 +17,14 @@ body {
     justify-content: center;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.img-logo{
-    height: 84px;
-    width: 84px;
+.img-logo {
+    height: 100px;
     border: #fffbff;
 }
 
@@ -63,9 +62,29 @@ body {
     border-color: #dddddd;
 } 
 
-.search{
-    width: 200px;
+.search {
+    display: flex;
+    /* width: 700px; */
+    max-width: 100%;
 }
+
+.search > input {
+    background: transparent;
+    width: 400px;
+    max-width: 100%;
+    font-size: 1.15em;
+    color: #fff;
+    padding: 15px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    transition: ease-in-out 0.15s;
+}
+.search > input:focus {
+    width: 700px;
+    background: #fff;
+    color: #0058af;
+}
+
 
 /*
 .header-row-one{
