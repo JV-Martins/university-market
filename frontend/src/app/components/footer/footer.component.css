@@ -1,0 +1,14 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #1e90ff;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.20em;
+}
+
+.bold{
+    font-weight:bold ;
+}
