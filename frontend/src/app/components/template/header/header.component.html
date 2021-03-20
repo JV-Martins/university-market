@@ -49,37 +49,24 @@
           <button mat-menu-item>Novo</button>
         </mat-menu>
       </div>
-      <div class="options" [matMenuTriggerFor]="menuStatus">
+      <div class="options" [matMenuTriggerFor]="menuNovo">
         <span>
-          <i class="fa fa-ticket"></i>
-          HomePage
-          <i class="fa fa-angle-down"></i>
-        </span>
-        <mat-menu #menuStatus="matMenu">
-          <button mat-menu-item>Usado</button>
-          <button mat-menu-item>Novo</button>
-        </mat-menu>
-      </div>
-      <div class="options" [matMenuTriggerFor]="menuStatus">
-        <span>
-          <i class="fa fa-ticket"></i>
+          <i class="fa fa-plus-square-o"></i>
           Novo
-          <i class="fa fa-angle-down"></i>
+          <!-- <i class="fa fa-angle-down"></i> -->
         </span>
-        <mat-menu #menuStatus="matMenu">
-          <button mat-menu-item>Usado</button>
-          <button mat-menu-item>Novo</button>
+        <mat-menu #menuNovo="matMenu">
+          <button mat-menu-item>Criar</button>
         </mat-menu>
       </div>
-      <div class="options" [matMenuTriggerFor]="menuStatus">
+      <div class="options" [matMenuTriggerFor]="menuNotificacao">
         <span>
-          <i class="fa fa-ticket"></i>
+          <i class="	fa fa-bell-o"></i>
           Notificações
           <i class="fa fa-angle-down"></i>
         </span>
-        <mat-menu #menuStatus="matMenu">
-          <button mat-menu-item>Usado</button>
-          <button mat-menu-item>Novo</button>
+        <mat-menu #menuNotificacao="matMenu">
+          <button mat-menu-item></button>
         </mat-menu>
       </div>
     </div>
