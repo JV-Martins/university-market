@@ -13,61 +13,26 @@
   </div>
   <div class="row-two">
     <div class="nav-options">
-      <div class="options"[matMenuTriggerFor]="menuCategoria">
-        <span>
-          <i class="fa fa-cubes"></i>
-          Categoria
-          <i class="fa fa-angle-down"></i>
-        </span>
-        <mat-menu #menuCategoria="matMenu">
-          <button mat-menu-item>Livros</button>
-          <button mat-menu-item>Eletrônicos</button>
-          <button mat-menu-item>Equipamentos</button>
-        </mat-menu>
-      </div>
-      <div class="options"[matMenuTriggerFor]="menuCurso">
-        <span>
-          <i class="fa fa-graduation-cap"></i>
-          Curso
-          <i class="fa fa-angle-down"></i>
-        </span>
-        <mat-menu #menuCurso="matMenu">
-          <button mat-menu-item>Análise e Desenvolvimento de Sistemas</button>
-          <button mat-menu-item>Medicina</button>
-          <button mat-menu-item>Odontologia</button>
-          <button mat-menu-item>Direito</button>
-        </mat-menu>
-      </div>
-      <div class="options" [matMenuTriggerFor]="menuStatus">
-        <span>
-          <i class="fa fa-ticket"></i>
-          Status
-          <i class="fa fa-angle-down"></i>
-        </span>
-        <mat-menu #menuStatus="matMenu">
-          <button mat-menu-item>Usado</button>
-          <button mat-menu-item>Novo</button>
-        </mat-menu>
-      </div>
-      <div class="options" [matMenuTriggerFor]="menuNovo">
-        <span>
-          <i class="fa fa-plus-square-o"></i>
-          Novo
-          <!-- <i class="fa fa-angle-down"></i> -->
-        </span>
-        <mat-menu #menuNovo="matMenu">
-          <button mat-menu-item>Criar</button>
-        </mat-menu>
-      </div>
-      <div class="options" [matMenuTriggerFor]="menuNotificacao">
-        <span>
-          <i class="	fa fa-bell-o"></i>
-          Notificações
-          <i class="fa fa-angle-down"></i>
-        </span>
-        <mat-menu #menuNotificacao="matMenu">
-          <button mat-menu-item></button>
-        </mat-menu>
+      <div *ngFor="let menuItem of menuList">
+        <div *ngIf="!menuItem.disabled" class="have-dropdown">
+          <div class="options">
+            <span>
+              <i class="{{ menuItem.icon }}"></i>
+              {{ menuItem.label }}
+              <i class="fa fa-angle-down" *ngIf="menuItem.submenu.length > 0"></i>
+            </span>
+            <!-- <mat-menu #{{ menuItem.label }}="matMenu">
+              <button mat-menu-item>Livros</button>
+              <button mat-menu-item>Eletrônicos</button>
+              <button mat-menu-item>Equipamentos</button>
+            </mat-menu> -->
+          </div>
+          <div class="dropdown-menu-gamb">
+            <a href="#">Livros</a>
+            <a href="#">Eletrônicos</a>
+            <a href="#">Equipamentos</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

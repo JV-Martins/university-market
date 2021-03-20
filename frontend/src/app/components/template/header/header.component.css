@@ -43,6 +43,27 @@ body {
     height: 100%;
 }
 
+.dropdown-menu-gamb {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    float: inline-end;
+    width: 100%;
+    /* top: 100px; */
+}
+.dropdown-menu-gamb > a {
+    display: flex;
+    width: 100%;
+    padding: 7px 12px;
+    border-bottom: solid 1px #ccc;
+    text-decoration: none;
+    background: transparent;
+    color: #fff;
+    transition: ease-in-out 0.15s;
+}
+.dropdown-menu-gamb > a:hover {
+    filter: brightness(1.25);
+}
 .options{
     display: flex;
     width: 120px;
@@ -61,7 +82,15 @@ body {
     cursor: pointer;
     color: #dddddd;
     border-color: #dddddd;
-} 
+}
+
+.options:hover .dropdown-menu-gamb {
+    display: flex;
+}
+
+.have-dropdown:hover .dropdown-menu-gamb {
+    display: flex;
+}
 
 .search {
     display: flex;
